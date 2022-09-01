@@ -1,0 +1,41 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark p-2 border-bottom border-1 border-dark">
+
+    <div class="container-fluid">
+      <a class="navbar-brand mx-5" href="#"> <i class="bi bi-bezier2"></i>Quantum </a>
+     
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mx-5">
+          <li class="nav-item my-2">
+            <a class="nav-link  mx-2" style="font-size:20px ;color: lightblue;" aria-current="page" href="#"><i class="bi bi-house-fill"></i></a>
+          </li>
+
+          <li class="nav-item my-2"  *ngIf="api.isLoggedin()"> 
+          <a class="nav-link text-light mx-2" id="register"   [routerLink]="['/register']" routerLinkActive="router-link-active">Signup</a>
+          </li>
+
+
+          <li class="nav-item my-2"  *ngIf="!api.isLoggedin()"> 
+            <a class="nav-link text-warning mx-2" id="profile"  [routerLink]="['/profile']" routerLinkActive="router-link-active">profile</a>
+            </li>
+          
+          <li class="nav-item my-2" class="hover"  *ngIf="api.isLoggedin()">
+            <a class="nav-link mx-2 text-light" id="login"  [routerLink]="['/login']" routerLinkActive="router-link-active">Get started</a>
+          </li>
+
+          <li class="nav-item my-2"  *ngIf="!api.isLoggedin()"> 
+           <p  class="mx-2 mt-2 text-success" id="power" style="font-size: 20px;" (click)="logout()" ><i class="bi bi-power"></i></p>
+            </li>
+          
+            <li class="nav-item my-2"  *ngIf="!api.isLoggedin()"> 
+              <a class="nav-link text-warning mx-2" id="user" [routerLink]="['/dashboard']" routerLinkActive="router-link-active">Dashboard</a>
+              </li>
+         
+        </ul>
+      </div>
+    </div>
+    
+  </nav>

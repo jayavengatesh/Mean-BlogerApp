@@ -1,0 +1,60 @@
+.nav-item{
+    letter-spacing: 1px;
+}
+
+.hover button{
+    background-color: green;
+    transition: 2s;
+}
+
+
+.black{
+    background-color: black;
+    transition: 2s;
+
+}
+
+.navbar-brand{
+ font-size: 25px;
+ font-weight: 500;
+ letter-spacing: 0.7px;
+
+}
+
+
+#power:hover{
+color: darkred;
+transition: 2s;
+
+}
+
+#power{
+    font-size: 20px;
+font-weight: 400;
+}
+
+#profile{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#user{
+     font-size: 20px;
+     font-weight: 400;
+}
+
+#register{
+    font-size: 20px;
+   font-weight: 400;
+}
+
+
+#login{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 11px;
+    border-radius: 30px;
+    width: 150px;
+    text-align: center;
+    background-color: darkgreen;
+}

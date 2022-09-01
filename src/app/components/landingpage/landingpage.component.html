@@ -1,0 +1,57 @@
+<section class="p-5 border-bottom border-1 border-dark" >
+    <div class="container p-5">
+          <div class="row">
+            <div class="col p-4">
+              <h1> <p class="lead p-2 text-dark" class="bigger">Explore things!</p></h1>
+              <figure>
+                <blockquote class="blockquote">
+                  <p> something is important enough, you do it even if the odds are not in your favor. ...</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                   <cite title="Source Title" style="font-size: 18px;">Elon musk</cite>
+                </figcaption>
+              </figure>
+              <button class="btn btn-dark border-4 rounded-pill"> <a class="nav-link text-warning" >Start Blogging</a></button>
+            </div>           
+          </div>
+    </div>
+</section>
+
+
+
+<section class=" p-5 border-bottom border  " id="cards" >
+  <div class="container ">
+
+      <strong><span style="font-size: 20px;"><i class="bi bi-lightning-charge-fill"></i></span>Trending on Internet </strong>
+     
+        <div class="row">
+          <div class="col mt-5 text-center " *ngFor="let data of maindata">
+            <a class="nav-link  mx-2" id="hoverbox"  [routerLink]="['/view/'+data._id]" routerLinkActive="router-link-active">
+            <strong style="letter-spacing: 1px;"><span><i class="bi bi-file-earmark-person"></i></span>{{data.author}}</strong>
+            <strong class="title mb-4"><p>{{data.title  }}</p></strong>
+            <strong>{{data.content | slice:0:40}}</strong>
+            </a>
+          </div>
+  </div>
+  
+  </div>
+</section>
+
+
+<section class="p-5 bg-dark">
+<div class="container">
+  <strong id="topic"><i class="bi bi-book-fill text-light"></i> Topics that make You Curious!</strong>
+  <figure class="text-center my-4 p-3" *ngFor="let data of maindata">
+    <a id="hoverdown" class="nav-link text-dark mx-2"  [routerLink]="['/view/'+data._id]" routerLinkActive="router-link-active">
+    <blockquote class="blockquote">
+      <strong id="title">{{data.title}}</strong>
+      <p id="content">{{data.content | slice:0:90}}...</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+       <cite title="Source Title">{{data.author}}</cite>
+    </figcaption>
+    </a>
+  </figure>
+
+</div>
+</section>

@@ -1,0 +1,28 @@
+<section class="p-5">
+    <div class="container p-5">
+        <p class="lead">add Your blogs here!</p>
+       <form  [formGroup]="formgroup" (submit)="onsubmit()" >
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">title</label>
+            <input type="text" class="form-control" formControlName="title" placeholder="title">
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Author name</label>
+            <input type="text" class="form-control" formControlName="author" placeholder="name">
+          </div>
+        
+        <!--   <div class="mb-3">
+            <label for="formFile" class="form-label">Default file input example</label>
+            <input class="form-control" type="file" id="formFile">
+          </div>-->
+
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Your Content</label>
+            <textarea class="form-control" formControlName="content" rows="3"></textarea>
+          </div>
+          <button class="mb-3 btn btn-dark" type="submit">submit</button>
+       </form>
+    </div>
+
+</section>

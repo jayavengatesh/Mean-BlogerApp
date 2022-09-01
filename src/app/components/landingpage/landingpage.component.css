@@ -1,0 +1,49 @@
+.bigger{
+    font-family: 'Times New Roman', serif;
+    font-size: 80px;
+    
+}
+
+.title{
+    font-family: 'Times New Roman', serif;
+    font-size: 30px;
+}
+
+.pager{
+    font-size: 20px;
+}
+
+#topic{
+    font-size: 25px;
+    color:lightblue
+}
+
+#title{
+    color: lightgray;
+}
+
+#content{
+    color: lightgray;
+}
+
+#hoverdown:hover{
+    background-color: blue;
+    opacity: 0.9;
+    transition: 0.5s;
+
+}
+
+#hoverbox:hover{
+    background-color: black;
+    color: white;
+    height: 250px;
+    transition: 0.5s;
+}
+
+#hoverbox{
+    color: black;
+}
+
+#cards{
+    background-color:  #ffd152;
+}

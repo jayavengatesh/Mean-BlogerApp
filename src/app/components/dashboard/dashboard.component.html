@@ -1,0 +1,33 @@
+<section class="p-5">
+    <div class="container p-lg-5 mt-5 my-auto">
+      <p style="font-size: 20px;">welcome to our Blog page <span class="text-warning">{{username}}</span> ,here </p>
+      <p  style="font-size: 20px;"> Your blogs can customized by the functions like edit,delete</p>
+     <button class="btn btn-dark border-4 rounded-pill"> <a class="nav-link text-warning" [routerLink]="['/insert']" routerLinkActive="router-link-active">Start Blogging</a></button>
+      <p class="my-3" style="font-size: 20px;">And Your blogs are right below</p>
+    </div>
+</section>
+
+
+<section class="">
+ <div class="container  text-center  ">
+  <figure class="text-center border-bottom"  *ngFor="let user of data">
+   <a class="nav-link text-dark mx-2"  [routerLink]="['/view/'+user._id]" routerLinkActive="router-link-active">
+  <blockquote class="blockquote">
+         <strong>{{user.title}}</strong>
+    <p class="content">{{user.content | slice:0:40}} </p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    Written By  <cite title="Source Title"> {{ user.author}}</cite>
+  </figcaption>
+</a> 
+  <a  class="text-warning"  [routerLink]="['/edit/'+user._id]" routerLinkActive="router-link-active"><i class="bi bi-pen-fill"></i></a> <br><br>
+   <a  (click)="delete(user._id)"><i class="bi bi-trash2-fill"></i></a>
+
+</figure>
+  
+
+ </div>
+
+</section>
+
+

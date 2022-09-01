@@ -1,0 +1,13 @@
+<section class="p-5">
+    <div class="container p-5" *ngFor="let data of view">
+        <figure>
+            <blockquote class="blockquote">
+            <strong><h1>{{data.title}}</h1></strong>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              by<cite title="Source Title">{{data.author}}</cite>
+            </figcaption>
+          </figure>     
+          <p style="letter-spacing: 0.4px;">{{data.content}}</p>
+    </div>
+</section>
